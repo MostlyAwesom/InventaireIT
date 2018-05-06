@@ -1,14 +1,14 @@
 Meteor.publish("TousLesObjets", function(){
     return  [
-        Appareils.Find(),
-        Consommables.Find(),
-        Fournisseurs.Find(),
-        Lieux.Find(),
-        Locaux.Find(),
-        Marques.Find(),
-        Modeles.Find(),
-        TypesMachine.Find(),
-        Villes.Find()
+        Appareils.find(),
+        Consommables.find(),
+        Fournisseurs.find(),
+        Lieux.find(),
+        Locaux.find(),
+        Marques.find(),
+        Modeles.find(),
+        TypesMachine.find(),
+        Villes.find()
     ]
     
 });
