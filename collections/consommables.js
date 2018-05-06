@@ -1,4 +1,4 @@
-Consommables.Collection('consommables'); 
+Consommables= new Mongo.Collection('consommables'); 
 
 Consommables.allow({ 
     insert: function() { 

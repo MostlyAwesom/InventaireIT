@@ -1,4 +1,4 @@
-Marques.Collection('marques'); 
+Marques = new Mongo.Collection('marques'); 
 
 Marques.allow({ 
     insert: function() { 

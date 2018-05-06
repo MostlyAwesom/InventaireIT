@@ -1,4 +1,4 @@
-Modeles.Collection('modeles'); 
+Modeles = new Mongo.Collection('modeles'); 
 
 Modeles.allow({ 
     insert: function() { 

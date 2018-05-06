@@ -1,4 +1,4 @@
-Appareils.Collection('appareils');
+Appareils = new Mongo.Collection('appareils');
 
 Appareils.allow({ 
     insert: function() { 

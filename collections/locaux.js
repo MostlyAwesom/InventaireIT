@@ -1,4 +1,4 @@
-Locaux.Collection('locaux');
+Locaux = new Mongo.Collection('locaux');
 
 Locaux.allow({ 
     insert: function() { 

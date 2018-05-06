@@ -1,4 +1,4 @@
-Fournisseurs.Collection('fournisseurs'); 
+Fournisseurs= new Mongo.Collection('fournisseurs'); 
 
 Fournisseurs.allow({ 
     insert: function() { 

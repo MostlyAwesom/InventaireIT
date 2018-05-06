@@ -1,4 +1,4 @@
-Villes.Collection('villes'); 
+Villes = new Mongo.Collection('villes'); 
 
 Villes.allow({ 
     insert: function() { 
