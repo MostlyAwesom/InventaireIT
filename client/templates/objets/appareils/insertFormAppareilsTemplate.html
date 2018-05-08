@@ -1,0 +1,18 @@
+<template name="insertFormAppareilsTemplate">
+        {{#autoForm collection="Appareils" id="insertAppareilForm" type="insert"}}
+            <fieldset>
+              <legend>Ajouter un appareil</legend>
+              {{> afQuickField name='numeroSerie'}}
+              {{> afQuickField name='nom'}}
+              {{> afQuickField name='modele'}}
+              {{> afQuickField name='typeMachine'}}
+              {{> afQuickField name='local'}}
+              {{> afQuickField name='fournisseur'}}
+              {{> afQuickField name='dateMiseEnService'}}
+              {{> afQuickField name='dateSortieDeService'}}
+              {{> afQuickField name='dateFinDeSupport'}}
+              {{> afQuickField name='dureeGarantie'}}
+            </fieldset>
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+        {{/autoForm}}
+    </template>
