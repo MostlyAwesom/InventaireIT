@@ -1,5 +1,5 @@
-<template name="insertFormAppareilsTemplate">
-        {{#autoForm collection="Appareils" id="insertAppareilsForm" type="insert"}}
+<template name="insertFormConsommablesTemplate">
+        {{#autoForm collection="Consommables" id="insertConsommablesForm" type="insert"}}
             <fieldset>
               <legend>Ajouter un appareil</legend>
               {{> afQuickField name='numeroSerie'}}
@@ -12,7 +12,7 @@
               {{> afQuickField name='dateSortieDeService'}}
               {{> afQuickField name='dateFinDeSupport'}}
               {{> afQuickField name='dureeGarantie'}}
-              {{> afQuickField name='parent'}}
+              {{> afQuickField name='quantite'}}
             </fieldset>
             <button type="submit" class="btn btn-primary">Ajouter</button>
         {{/autoForm}}

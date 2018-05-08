@@ -5,6 +5,8 @@
             <tr>
                 <th scope="col">Type</th>
                 <th scope="col">Nom</th>
+                <th scope="col">Local</th>
+                <th scope="col">Lieu</th>
                 <th scope="col">Date de mise en service</th>
                 <th scope="col">Lié à</th>
                 <th scope="col">Actions</th>
@@ -13,10 +15,12 @@
         <tbody>
             {{#each appareils}}
                 <tr>
-                    <td>{{ type }}</td>
-                    <td>{{ name }}</td>
-                    <td>{{ serviceDate }}</td>
-                    <td>{{ parentName }}</td>
+                    <td>{{ typeMachine }}</td>
+                    <td>{{ nom }}</td>
+                    <td>{{ local }}</td>
+                    <td>{{ lieu }}</td>
+                    <td>{{ dateMiseEnService }}</td>
+                    <td>{{ parent }}</td>
                     <td>
                         <button class="btn btn-outline-info" href="#" id="show_btn">Détails</button>
                         <button class="btn btn-outline-info" id="update_btn">Modifier</button>

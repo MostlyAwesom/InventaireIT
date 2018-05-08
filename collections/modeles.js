@@ -1,4 +1,21 @@
+import SimpleSchema from 'simpl-schema';
+SimpleSchema.extendOptions(['autoform']);
+
 Modeles = new Mongo.Collection('modeles'); 
+
+Modeles.attachSchema(new SimpleSchema({
+    nom: {
+      type: String,
+      label: "Nom"
+    }, 
+    marque: {
+        type: String,
+        label: "Marque",
+        autoform: {
+            type: "select"
+        }
+    }
+  }, { tracker: Tracker }));
 
 Modeles.allow({ 
     insert: function() { 

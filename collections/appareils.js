@@ -16,14 +16,23 @@ Appareils.attachSchema(new SimpleSchema({
     modele: {
       type: String,
       label: "Modèle",
+      autoform: {
+        type: "select"
+      }
     },
     typeMachine: {
       type: String,
       label: "Type d'appareil",
+      autoform: {
+        type: "select"
+      }
     },
     local: {
       type: String,
       label: "Local",
+      autoform: {
+        type: "select"
+        }
     },
     fournisseur: {
         type: String,
@@ -31,7 +40,7 @@ Appareils.attachSchema(new SimpleSchema({
         autoform: {
             type: "select"
         }
-      },
+    },
     dateMiseEnService: {
         type: Date,
         label: "Date de mise en service",
@@ -47,6 +56,13 @@ Appareils.attachSchema(new SimpleSchema({
     dureeGarantie: {
         type: String,
         label: "Durée de la garantie",
+    },
+    parent: {
+        type: String,
+        label: "Lié à",
+        autoform: {
+            type: "select"
+        }
     }
   }, { tracker: Tracker }));
 

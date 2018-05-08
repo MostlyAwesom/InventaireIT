@@ -4,15 +4,15 @@
         <thead>
             <tr>
                 <th scope="col">Nom</th>
-                <th scope="col">Date de création</th>
+                <th scope="col">Quantité</th>
                 <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody>
             {{#each consommables}}
                 <tr>
-                    <td>{{ name }}</td>
-                    <td>{{ createdAt }}</td>
+                    <td>{{ nom }}</td>
+                    <td>{{ quantite }}</td>
                     <td>
                         <button class="btn btn-outline-info" href="#" id="show_btn">Détails</button>
                         <button class="btn btn-outline-info" id="update_btn">Modifier</button>
