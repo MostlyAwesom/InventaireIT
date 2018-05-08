@@ -28,6 +28,9 @@ Appareils.attachSchema(new SimpleSchema({
     fournisseur: {
         type: String,
         label: "Fournisseur",
+        autoform: {
+            type: "select"
+        }
       },
     dateMiseEnService: {
         type: Date,
