@@ -1,4 +1,4 @@
-Template.insertFormAppareils.helpers({
+Template.registerHelper({
     fournisseurOptions: function () {
       return Fournisseurs.find().map(function (o) {
         return {label: o.nom, value: o._id};
