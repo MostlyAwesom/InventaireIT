@@ -12,7 +12,7 @@ Lieux.attachSchema(new SimpleSchema({
         type: String,
         label: "Rue"
     },
-    ville: {
+    villeId: {
         type: String,
         label: "Ville",
         autoform: {

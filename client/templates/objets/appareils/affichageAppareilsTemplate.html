@@ -6,6 +6,7 @@
                 <th scope="col">Type</th>
                 <th scope="col">Nom</th>
                 <th scope="col">Local</th>
+                <th scope="col">Etage</th>
                 <th scope="col">Lieu</th>
                 <th scope="col">Date de mise en service</th>
                 <th scope="col">Lié à</th>
@@ -17,10 +18,11 @@
                 <tr>
                     <td>{{ typeMachine }}</td>
                     <td>{{ nom }}</td>
-                    <td>{{ local }}</td>
-                    <td>{{ lieu }}</td>
+                    <td>{{ local.numero }}</td>
+                    <td>{{ local.etage }}</td>
+                    <td>{{ lieu.nom }}</td>
                     <td>{{ dateMiseEnService }}</td>
-                    <td>{{ parent }}</td>
+                    <td>{{ parent.nom }}</td>
                     <td>
                         <button class="btn btn-outline-info" href="#" id="show_btn">Détails</button>
                         <button class="btn btn-outline-info" id="update_btn">Modifier</button>

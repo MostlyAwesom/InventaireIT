@@ -4,15 +4,15 @@
               <legend>Ajouter un appareil</legend>
               {{> afQuickField name='numeroSerie'}}
               {{> afQuickField name='nom'}}
-              {{> afQuickField name='modele' options=modeleOptions}}
-              {{> afQuickField name='typeMachine' options=typeMachineOptions}}
-              {{> afQuickField name='local' options=localOptions}}
-              {{> afQuickField name='fournisseur' options=fournisseurOptions}}
+              {{> afQuickField name='modeleId' options=modeleOptions}}
+              {{> afQuickField name='typeMachineId' options=typeMachineOptions}}
+              {{> afQuickField name='localId' options=localOptions}}
+              {{> afQuickField name='fournisseurId' options=fournisseurOptions}}
               {{> afQuickField name='dateMiseEnService'}}
               {{> afQuickField name='dateSortieDeService'}}
               {{> afQuickField name='dateFinDeSupport'}}
               {{> afQuickField name='dureeGarantie'}}
-              {{> afQuickField name='parent'}}
+              {{> afQuickField name='parentId'}}
             </fieldset>
             <button type="submit" class="btn btn-primary">Ajouter</button>
         {{/autoForm}}

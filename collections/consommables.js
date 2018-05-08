@@ -13,28 +13,28 @@ Consommables.attachSchema(new SimpleSchema({
       type: String,
       label: "Nom"
     },
-    modele: {
+    modeleId: {
       type: String,
       label: "Modèle",
       autoform: {
         type: "select"
       }
     },
-    typeMachine: {
+    typeMachineId: {
       type: String,
       label: "Type d'appareil",
       autoform: {
         type: "select"
       }
     },
-    local: {
+    localId: {
       type: String,
       label: "Local",
       autoform: {
         type: "select"
         }
     },
-    fournisseur: {
+    fournisseurId: {
         type: String,
         label: "Fournisseur",
         autoform: {

@@ -1,16 +1,18 @@
-<template name="affichageFournisseursTemplate">
-        <h1>Fournisseurs</h1>
+<template name="affichageVillesTemplate">
+        <h1>Villes</h1>
         <table class="table">
             <thead>
                 <tr>
                     <th scope="col">Nom</th>
+                    <th scope="col">NPA</th>
                     <th scope="col">Actions</th>
                 </tr>
             </thead>
             <tbody>
-                {{#each fournisseurs}}
+                {{#each villes}}
                     <tr>
                         <td>{{ nom }}</td>
+                        <td>{{ npa }}</td>
                         <td>
                             <button class="btn btn-outline-info" href="#" id="show_btn">Détails</button>
                             <button class="btn btn-outline-info" id="update_btn">Modifier</button>

@@ -12,7 +12,7 @@ Locaux.attachSchema(new SimpleSchema({
         type: Number,
         label: "Numéro"
     },
-    lieu: {
+    lieuId: {
         type: String,
         label: "Lieu",
         autoform: {

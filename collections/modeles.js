@@ -8,7 +8,7 @@ Modeles.attachSchema(new SimpleSchema({
       type: String,
       label: "Nom"
     }, 
-    marque: {
+    marqueId: {
         type: String,
         label: "Marque",
         autoform: {

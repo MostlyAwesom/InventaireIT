@@ -4,6 +4,7 @@
         <thead>
             <tr>
                 <th scope="col">Nom</th>
+                <th scope="col">Modèle</th>
                 <th scope="col">Quantité</th>
                 <th scope="col">Actions</th>
             </tr>
@@ -12,6 +13,7 @@
             {{#each consommables}}
                 <tr>
                     <td>{{ nom }}</td>
+                    <td>{{ modele.nom }}</td>
                     <td>{{ quantite }}</td>
                     <td>
                         <button class="btn btn-outline-info" href="#" id="show_btn">Détails</button>
