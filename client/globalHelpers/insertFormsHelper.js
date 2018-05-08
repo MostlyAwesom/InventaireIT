@@ -18,5 +18,20 @@ Template.registerHelper({
       return TypesMachine.find().map(function (o) {
         return {label: o.nom, value: o._id};
       });
+    },
+    villeOptions: function () {
+      return Villes.find().map(function (o) {
+        return {label: o.nom, value: o._id};
+      });
+    },
+    LieuOptions: function () {
+      return Lieux.find().map(function (o) {
+        return {label: o.nom, value: o._id};
+      });
+    },
+    marqueOptions: function () {
+      return Marques.find().map(function (o) {
+        return {label: o.nom, value: o._id};
+      });
     }
   });

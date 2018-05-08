@@ -1,0 +1,9 @@
+<template name="insertFormTypesMachineTemplate">
+        {{#autoForm collection="TypesMachine" id="insertTypesMachineForm" type="insert"}}
+            <fieldset>
+              <legend>Ajouter un type de machine</legend>
+              {{> afQuickField name='libelle'}}
+            </fieldset>
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+        {{/autoForm}}
+</template>

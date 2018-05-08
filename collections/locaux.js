@@ -4,13 +4,13 @@ SimpleSchema.extendOptions(['autoform']);
 Locaux = new Mongo.Collection('locaux');
 
 Locaux.attachSchema(new SimpleSchema({
-    etage: {
-      type: Number,
-      label: "Etage"
-    },
     numero: {
         type: Number,
         label: "Numéro"
+    },
+    etage: {
+        type: Number,
+        label: "Etage"
     },
     lieuId: {
         type: String,

@@ -1,20 +1,18 @@
-<template name="affichageLieuxTemplate">
-        <h1>Lieux</h1>
+<template name="affichageModelesTemplate">
+        <h1>Modèles</h1>
         <table class="table">
             <thead>
                 <tr>
                     <th scope="col">Nom</th>
-                    <th scope="col">Rue</th>
-                    <th scope="col">Ville</th>
+                    <th scope="col">Marque</th>
                     <th scope="col">Actions</th>
                 </tr>
             </thead>
             <tbody>
-                {{#each lieux}}
+                {{#each modeles}}
                     <tr>
                         <td>{{ nom }}</td>
-                        <td>{{ npa }}</td>
-                        <td>{{ ville.nom }}</td>
+                        <td>{{ marque.nom }}</td>
                         <td>
                             <button class="btn btn-outline-info" href="#" id="show_btn">Détails</button>
                             <button class="btn btn-outline-info" id="update_btn">Modifier</button>

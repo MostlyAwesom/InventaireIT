@@ -1,0 +1,11 @@
+<template name="insertFormLocauxTemplate">
+        {{#autoForm collection="Locaux" id="insertLocauxForm" type="insert"}}
+            <fieldset>
+              <legend>Ajouter un local</legend>
+              {{> afQuickField name='numero'}}
+              {{> afQuickField name='etage'}}
+              {{> afQuickField name='lieuId' options='lieuOptions'}}
+            </fieldset>
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+        {{/autoForm}}
+</template>

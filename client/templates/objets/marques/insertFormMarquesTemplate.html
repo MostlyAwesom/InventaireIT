@@ -1,0 +1,9 @@
+<template name="insertFormMarquesTemplate">
+        {{#autoForm collection="Marques" id="insertMarquesForm" type="insert"}}
+            <fieldset>
+              <legend>Ajouter une marque</legend>
+              {{> afQuickField name='nom'}}
+            </fieldset>
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+        {{/autoForm}}
+</template>
