@@ -8,6 +8,9 @@ Template.affichageAppareilsTemplate.helpers({
     local() {
         return Locaux.findOne(this.localId); 
     },
+    lieu() {
+        return Lieux.findOne(this.local.lieuId);
+    },
     fournisseur() {
         return Fournisseurs.findOne(this.fournisseurId); 
     }, 
