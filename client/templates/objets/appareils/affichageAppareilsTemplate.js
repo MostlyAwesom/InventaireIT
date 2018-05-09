@@ -1,3 +1,9 @@
+Template.affichageAppareilsTemplate.events({
+	'click #delete_btn': function(){
+		Appareils.remove(this._id);	
+	}
+});
+
 Template.affichageAppareilsTemplate.helpers({
     modele() {
         return Modeles.findOne(this.modeleId);
