@@ -8,6 +8,9 @@ Template.affichageAppareilsTemplate.helpers({
     modele() {
         return Modeles.findOne(this.modeleId);
     },
+    marque() {
+        return Marques.findOne(this.modele.marqueId);
+    },
     typeMachine() {
         return TypesMachine.findOne(this.typeMachineId); 
     },
@@ -16,6 +19,9 @@ Template.affichageAppareilsTemplate.helpers({
     },
     lieu() {
         return Lieux.findOne(this.local.lieuId);
+    },
+    ville() {
+        return Villes.findOne(this.lieu.villeId);
     },
     fournisseur() {
         return Fournisseurs.findOne(this.fournisseurId); 

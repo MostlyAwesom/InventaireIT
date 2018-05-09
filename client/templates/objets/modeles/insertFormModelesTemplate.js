@@ -1,9 +1,7 @@
-Template.insertFormModelesTemplate.helpers({ 
-    marqueOptions: function () {
-        return Marques.find().map(function (o) {
-          return {label: o.nom, value: o._id};
-        });
-      }
-}); 
+Template.registerHelper("marqueOptions", function() {
+    return Marques.find().map(function (marque) {
+      return {label: marque.name, value: marque._id};
+    });
+  });
 
 

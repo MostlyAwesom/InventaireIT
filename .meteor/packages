@@ -27,5 +27,7 @@ iron:router
 aldeed:autoform@6.3.0
 aldeed:collection2@3.0.0
 aldeed:simple-schema
+#aldeed:autoform-select2
+#natestrauser:select2
 msavin:mongol
 session

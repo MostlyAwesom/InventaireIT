@@ -1,4 +1,4 @@
-Template.registerHelper({
+/* Template.registerHelper({
     fournisseurOptions: function () {
       return Fournisseurs.find().map(function (o) {
         return {label: o.nom, value: o._id};
@@ -30,8 +30,14 @@ Template.registerHelper({
       });
     },
     marqueOptions: function () {
-      return Marques.find().map(function (o) {
-        return {label: o.nom, value: o._id};
+      return Marques.find().map(function (marque) {
+        return {label: marque.nom, value: marque._id};
       });
     }
+  }); */
+/*
+Template.registerHelper("marqueOptions", function() {
+  return Marques.find().map(function (marque) {
+    return {label: marque.name, value: marque._id};
   });
+});*/
