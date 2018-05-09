@@ -1,3 +1,9 @@
 <template name="updateFormFournisseurTemplate">
-    {{> quickForm collection="Fournisseurs" doc=fournisseur id="updateFormFournisseurs" type="update"}}
+        {{#autoForm collection="Fournisseurs" doc=fournisseur id="insertFournisseursForm" type="update"}}
+        <fieldset>
+          <legend>Modifier un fournisseur</legend>
+          {{> afQuickField name='nom'}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Modifier</button>
+    {{/autoForm}}
 </template>
