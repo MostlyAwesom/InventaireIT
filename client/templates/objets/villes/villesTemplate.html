@@ -1,0 +1,13 @@
+<template name="villesTemplate">
+        <p>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseInsertForm" aria-expanded="false" aria-controls="collapseInsertForm">
+                Afficher le formulaire d'insertion
+            </button>
+            <div class="collapse" id="collapseInsertForm">
+                <div class="card card-body">
+                        {{> insertFormVillesTemplate}}
+                </div>
+            </div>
+        </p>
+        {{> affichageVillesTemplate}}
+    </template>

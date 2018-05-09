@@ -9,6 +9,9 @@ Meteor.publish("TousLesObjets", function(){
         Modeles.find(),
         TypesMachine.find(),
         Villes.find()
-    ]
-    
+    ]  
+});
+
+Meteor.publish("Fournisseurs", function(){
+    return  Fournisseurs.find();
 });

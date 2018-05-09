@@ -1,3 +1,9 @@
+Template.affichageConsommablesTemplate.events({
+	'click #delete_btn': function(){
+		Consommables.remove(this._id);	
+	}
+});
+
 Template.affichageConsommablesTemplate.helpers({
     modele() {
         return Modeles.findOne(this.modeleId);
