@@ -11,9 +11,6 @@ Template.affichageConsommablesTemplate.helpers({
     marque() {
         return Marques.findOne(this.modele.marqueId);
     },
-    typeMachine() {
-        return TypesMachine.findOne(this.typeMachineId); 
-    },
     local() {
         return Locaux.findOne(this.localId); 
     },

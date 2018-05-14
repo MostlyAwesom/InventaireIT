@@ -9,17 +9,13 @@ Consommables.attachSchema(new SimpleSchema({
       label: "Numéro de série",
       max: 200,
     },
-    nom: {
+    couleur: {
       type: String,
-      label: "Nom"
+      label: "Couleur",
     },
     modeleId: {
       type: String,
       label: "Modèle",
-    },
-    typeMachineId: {
-      type: String,
-      label: "Type d'appareil",
     },
     localId: {
       type: String,
@@ -29,22 +25,6 @@ Consommables.attachSchema(new SimpleSchema({
         type: String,
         label: "Fournisseur",
       },
-    dateMiseEnService: {
-        type: Date,
-        label: "Date de mise en service",
-    },
-    dateSortieDeService: {
-        type: Date,
-        label: "Date de sortie de service",
-    },
-    dateFinDeSupport: {
-        type: Date,
-        label: "Date de fin de support",
-    },
-    dureeGarantie: {
-        type: String,
-        label: "Durée de la garantie",
-    },
     quantite: {
         type: Number,
         label: "Quantité"

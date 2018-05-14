@@ -14,9 +14,12 @@ Template.insertFormConsommablesTemplate.helpers({
       return {label: l.numero, value: l._id};
     });
   },
-  typesMachineOptions: function () {
-    return TypesMachine.find().map(function (t) {
-      return {label: t.libelle, value: t._id};
-    });
+  couleursOptions: function () {
+    return [
+      {label: "Noir", value: "Noir"},
+      {label: "Magenta", value: "Magenta"},
+      {label: "Cyan", value: "Cyan"},
+      {label: "Jaune", value: "Jaune"}
+    ]
   }
 });
