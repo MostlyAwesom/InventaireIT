@@ -18,10 +18,13 @@ Template.affichageAppareilsTemplate.helpers({
         return Locaux.findOne(this.localId); 
     },
     lieu() {
-        return Lieux.findOne(this.local.lieuId);
+        var currentLocal = Locaux.findOne(this.localId);
+        return Lieux.findOne(currentLocal.lieuId);
     },
     ville() {
-        return Villes.findOne(this.lieu.villeId);
+        var currentLocal = Locaux.findOne(this.localId);
+        var currentLieu = Lieux.findOne(currentLocal.lieuId);
+        return Villes.findOne(currentLieu.villeId);
     },
     fournisseur() {
         return Fournisseurs.findOne(this.fournisseurId); 

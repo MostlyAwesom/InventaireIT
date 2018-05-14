@@ -15,9 +15,6 @@ Locaux.attachSchema(new SimpleSchema({
     lieuId: {
         type: String,
         label: "Lieu",
-        autoform: {
-            type: "select"
-        }
     }
   }, { tracker: Tracker }));
 

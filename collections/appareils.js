@@ -16,30 +16,18 @@ Appareils.attachSchema(new SimpleSchema({
     modeleId: {
       type: String,
       label: "Modèle",
-      autoform: {
-        type: "select"
-      }
     },
     typeMachineId: {
       type: String,
       label: "Type d'appareil",
-      autoform: {
-        type: "select"
-      }
     },
     localId: {
       type: String,
       label: "Local",
-      autoform: {
-        type: "select"
-        }
     },
     fournisseurId: {
         type: String,
         label: "Fournisseur",
-        autoform: {
-            type: "select"
-        }
     },
     dateMiseEnService: {
         type: Date,
@@ -48,21 +36,22 @@ Appareils.attachSchema(new SimpleSchema({
     dateSortieDeService: {
         type: Date,
         label: "Date de sortie de service",
+        optional: true
     },
     dateFinDeSupport: {
         type: Date,
         label: "Date de fin de support",
+        optional: true
     },
     dureeGarantie: {
         type: String,
         label: "Durée de la garantie",
+        optional: true
     },
     parentId: {
         type: String,
         label: "Lié à",
-        autoform: {
-            type: "select"
-        }
+        optional: true
     }
   }, { tracker: Tracker }));
 

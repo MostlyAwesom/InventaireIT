@@ -14,10 +14,7 @@ Lieux.attachSchema(new SimpleSchema({
     },
     villeId: {
         type: String,
-        label: "Ville",
-        autoform: {
-            type: "select"
-        }
+        label: "Ville"
     }
   }, { tracker: Tracker }));
 

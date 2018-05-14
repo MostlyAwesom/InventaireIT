@@ -11,10 +11,6 @@ Modeles.attachSchema(new SimpleSchema({
     marqueId: {
         type: String,
         label: "Marque",
-        autoform: {
-            type: "select",
-            placeholder: 'Séléctionnez la marque du nouveau modèle'
-        }
     }
   }, { tracker: Tracker }));
 
