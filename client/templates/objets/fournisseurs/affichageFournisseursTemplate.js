@@ -3,6 +3,6 @@ Template.affichageFournisseursTemplate.events({
 		Fournisseurs.remove(this._id);	
 	},
 	'click #update_btn': function() {
-		Router.go('FournisseurUpdate', {_id: this._id});
+		Router.go('FournisseursUpdate', {_id: this._id});
 	}
 });
