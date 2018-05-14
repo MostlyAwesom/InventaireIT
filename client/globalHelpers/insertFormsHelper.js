@@ -34,7 +34,7 @@
         return {label: marque.nom, value: marque._id};
       });
     }
-  }); */
+  }); 
 /*
 Template.registerHelper("marqueOptions", function() {
   return Marques.find().map(function (marque) {
