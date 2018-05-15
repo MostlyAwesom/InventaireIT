@@ -1,6 +1,9 @@
 Template.affichageConsommablesTemplate.events({
 	'click #delete_btn': function(){
 		Consommables.remove(this._id);	
+	},
+	'click #update_btn': function() {
+		Router.go('ConsommablesUpdate', {_id: this._id});
 	}
 });
 

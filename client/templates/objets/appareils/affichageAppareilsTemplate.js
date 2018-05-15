@@ -1,6 +1,9 @@
 Template.affichageAppareilsTemplate.events({
 	'click #delete_btn': function(){
 		Appareils.remove(this._id);	
+	},
+	'click #update_btn': function() {
+		Router.go('AppareilsUpdate', {_id: this._id});
 	}
 });
 
