@@ -37,7 +37,33 @@ Appareils.attachSchema(new SimpleSchema({
                 return {label: t.libelle, value: t._id};
             });
         }
-    }
+      }   
+    },
+    villeId: {
+        type: String,
+        label: 'Ville',
+        autoform: {
+            type: 'select',
+            firstOption: '',
+            options: function () {
+                return Villes.find().map(function (v) {
+                    return {label: v.nom, value: v._id};
+                });
+            }
+        }
+    },
+    lieuId: {
+        type: String,
+        label: 'Lieu',
+        autoform: {
+            type: 'select',
+            firstOption: '',
+            options: function () {
+                return Lieux.find({villeId: AutoForm.getFieldValue('villeId')}).map(function (l) {
+                    return {label: l.nom, value: l._id};
+                });
+            }
+        }
     },
     localId: {
       type: String,
@@ -46,7 +72,7 @@ Appareils.attachSchema(new SimpleSchema({
         type: 'select',
         firstOption: '',
         options: function () {
-            return Locaux.find().map(function (l) {
+            return Locaux.find({lieuId: AutoForm.getFieldValue('lieuId')}).map(function (l) {
                 return {label: l.numero, value: l._id};
             });
         }
