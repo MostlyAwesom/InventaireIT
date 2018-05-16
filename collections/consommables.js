@@ -11,6 +11,17 @@ Consommables.attachSchema(new SimpleSchema({
     couleur: {
       type: String,
       label: "Couleur",
+      autoform: {
+        type: 'select',
+        firstOption: '',
+        options: function(){
+          return [
+            {label: "Noir", value: "Noir"},
+            {label: "Magenta", value: "Magenta"},
+            {label: "Cyan", value: "Cyan"},
+            {label: "Jaune", value: "Jaune"}
+          ]}
+        }
     },
     modeleId: {
       type: String,
