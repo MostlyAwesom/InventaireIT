@@ -15,7 +15,7 @@ Appareils.attachSchema(new SimpleSchema({
     },
     marqueId: {
         type: String,
-        label: 'Marque',
+        label: 'MarqueZ',
         autoform: {
             type: 'select',
             firstOption: '',
