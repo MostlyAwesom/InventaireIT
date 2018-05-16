@@ -6,20 +6,33 @@ Locaux = new Mongo.Collection('locaux');
 Locaux.attachSchema(new SimpleSchema({
     numero: {
         type: Number,
-        label: "Numéro"
+        label: 'Numéro'
     },
     etage: {
         type: Number,
-        label: "Etage"
+        label: 'Etage'
     },
-    lieuId: {
+    villeId: {
         type: String,
-        label: "Lieu",
+        label: 'Ville',
         autoform: {
             type: 'select',
             firstOption: '',
             options: function () {
-                return Lieux.find().map(function (l) {
+                return Villes.find().map(function (v) {
+                    return {label: v.nom, value: v._id};
+                });
+            }
+        }
+    },
+    lieuId: {
+        type: String,
+        label: 'Lieu',
+        autoform: {
+            type: 'select',
+            firstOption: '',
+            options: function () {
+                return Lieux.find({villeId: autoform.getFieldValue('villeId')}).map(function (l) {
                     return {label: l.nom, value: l._id};
                 });
             }
