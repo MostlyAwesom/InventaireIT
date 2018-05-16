@@ -30,7 +30,7 @@ Consommables.attachSchema(new SimpleSchema({
             type: 'select',
             firstOption: '',
             options: function () {
-                return Marque.find().map(function (m) {
+                return Marques.find().map(function (m) {
                     return {label: m.nom, value: m._id};
                 });
             }

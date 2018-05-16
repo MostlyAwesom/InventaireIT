@@ -7,7 +7,6 @@ Appareils.attachSchema(new SimpleSchema({
     numeroSerie: {
       type: String,
       label: "Numéro de série",
-      max: 200,
     },
     nom: {
       type: String,
@@ -15,12 +14,12 @@ Appareils.attachSchema(new SimpleSchema({
     },
     marqueId: {
         type: String,
-        label: 'MarqueZ',
+        label: 'Marque',
         autoform: {
             type: 'select',
             firstOption: '',
             options: function () {
-                return Marque.find().map(function (m) {
+                return Marques.find().map(function (m) {
                     return {label: m.nom, value: m._id};
                 });
             }
