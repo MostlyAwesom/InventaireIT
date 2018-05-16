@@ -4,6 +4,9 @@ Template.affichageModelesTemplate.events({
 	},
 	'click #update_btn': function() {
 		Router.go('ModelesUpdate', {_id: this._id});
+	},
+	'click #read_btn': function() {
+		Router.go('ModelesRead', {_id: this._id});
 	}
 });
 

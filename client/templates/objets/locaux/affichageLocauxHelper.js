@@ -4,6 +4,9 @@ Template.affichageLocauxTemplate.events({
 	},
 	'click #update_btn': function() {
 		Router.go('LocauxUpdate', {_id: this._id});
+    },
+    'click #read_btn': function() {
+		Router.go('LocauxRead', {_id: this._id});
 	}
 });
 

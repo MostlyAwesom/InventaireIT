@@ -4,5 +4,8 @@ Template.affichageTypesMachineTemplate.events({
 	},
 	'click #update_btn': function() {
 		Router.go('TypesMachineUpdate', {_id: this._id});
+	},
+	'click #read_btn': function() {
+		Router.go('TypesMachineRead', {_id: this._id});
 	}
 });
