@@ -1,0 +1,10 @@
+<template name="readFormVillesTemplate">
+        {{#autoForm collection="Villes" doc=ville id="readVilleForm" type="disabled"}}
+        <fieldset>
+            <legend>Détails de la ville</legend>
+            {{> afQuickField name='nom'}}
+            {{> afQuickField name='npa'}}id="submitUpdate-btn"
+          </fieldset>
+          <button type="submit" class="btn btn-primary" id="submitRetour_btn">Retour</button>
+        {{/autoForm}}
+    </template>

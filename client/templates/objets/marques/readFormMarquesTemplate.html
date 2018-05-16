@@ -1,0 +1,9 @@
+<template name="readFormMarquesTemplate">
+        {{#autoForm collection="Marques" doc=marque id="readMarquesForm" type="disabled"}}
+            <fieldset>
+              <legend>Détails de la marque</legend>
+              {{> afQuickField name='nom'}}
+            </fieldset>
+            <button type="submit" class="btn btn-primary" id="submitRead_btn">Retour</button>
+        {{/autoForm}}
+    </template>

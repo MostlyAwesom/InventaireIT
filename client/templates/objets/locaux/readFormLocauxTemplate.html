@@ -1,0 +1,11 @@
+<template name="readFormLocauxTemplate">
+        {{#autoForm collection="Locaux" doc=local id="readLocauxForm" type="disabled"}}
+            <fieldset>
+              <legend>Détails du local</legend>
+              {{> afQuickField name='numero'}}
+              {{> afQuickField name='etage'}}
+              {{> afQuickField name='lieuId' options=lieuxOptions}}
+            </fieldset>
+            <button type="submit" class="btn btn-primary" id="submitRead_btn">Retour</button>
+        {{/autoForm}}
+    </template>
