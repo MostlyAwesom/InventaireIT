@@ -7,7 +7,6 @@ Consommables.attachSchema(new SimpleSchema({
     numeroSerie: {
       type: String,
       label: "Numéro de série",
-      max: 200,
     },
     couleur: {
       type: String,

@@ -1,0 +1,9 @@
+<template name="updateFormMarquesTemplate">
+    {{#autoForm collection="Marques" doc=marque id="updateMarquesForm" type="update"}}
+        <fieldset>
+          <legend>Modifier une marque</legend>
+          {{> afQuickField name='nom'}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary" id="submitUpdate_btn">Modifier</button>
+    {{/autoForm}}
+</template>

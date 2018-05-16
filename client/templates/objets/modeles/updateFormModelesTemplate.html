@@ -1,0 +1,10 @@
+<template name="updateFormModelesTemplate">
+    {{#autoForm collection="Modeles" doc=modele id="updateModelesForm" type="update"}}
+        <fieldset>
+          <legend>Modifier un modèle</legend>
+          {{> afQuickField name='nom'}}
+          {{> afQuickField name='marqueId' options=marqueOptions}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary" id="submitUpdate_btn">Modifier</button>
+    {{/autoForm}}
+</template>

@@ -1,0 +1,18 @@
+<template name="readFormAppareilsTemplate">
+    {{#autoForm collection="Appareils" doc=appareil id="readAppareilsForm" type="disabled"}}
+        <fieldset>
+          {{> afQuickField name='numeroSerie'}}
+          {{> afQuickField name='nom'}}
+          {{> afQuickField name='modeleId' options=modelesOptions}}
+          {{> afQuickField name='typeMachineId' options=typesMachineOptions}}
+          {{> afQuickField name='localId' options=locauxOptions}}
+          {{> afQuickField name='fournisseurId' options=fournisseursOptions}}
+          {{> afQuickField name='dateMiseEnService'}}
+          {{> afQuickField name='dateSortieDeService'}}
+          {{> afQuickField name='dateFinDeSupport'}}
+          {{> afQuickField name='dureeGarantie'}}
+          {{> afQuickField name='parentId' option=parentsOptions}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary" id="submitRead_btn">Retour</button>
+    {{/autoForm}}
+</template>

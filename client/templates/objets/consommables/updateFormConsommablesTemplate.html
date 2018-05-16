@@ -1,0 +1,14 @@
+<template name="updateFormConsommablesTemplate">
+    {{#autoForm collection="Consommables" doc=consommable id="updateConsommablesForm" type="update"}}
+        <fieldset>
+          <legend>Modifier un consommables</legend>
+          {{> afQuickField name='numeroSerie'}}
+          {{> afQuickField name='couleur' options=couleursOptions}}
+          {{> afQuickField name='modeleId' options=modelesOptions}}
+          {{> afQuickField name='localId' options=locauxOptions}}
+          {{> afQuickField name='fournisseurId' options=fournisseursOptions}}
+          {{> afQuickField name='quantite'}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary" id="submitUpdate_btn">Modifier</button>
+    {{/autoForm}}
+</template>

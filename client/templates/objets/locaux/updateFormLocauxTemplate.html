@@ -1,0 +1,11 @@
+<template name="updateFormLocauxTemplate">
+    {{#autoForm collection="Locaux" doc=local id="updateLocauxForm" type="update"}}
+        <fieldset>
+          <legend>Modifier un local</legend>
+          {{> afQuickField name='numero'}}
+          {{> afQuickField name='etage'}}
+          {{> afQuickField name='lieuId' options=lieuxOptions}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary" id="submitUpdate_btn">Modifier</button>
+    {{/autoForm}}
+</template>

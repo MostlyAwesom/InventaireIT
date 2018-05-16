@@ -1,7 +1,7 @@
 <template name="insertFormConsommablesTemplate">
         {{#autoForm collection="Consommables" id="insertConsommablesForm" type="insert"}}
             <fieldset>
-              <legend>Ajouter un appareil</legend>
+              <legend>Ajouter un consommable</legend>
               {{> afQuickField name='numeroSerie'}}
               {{> afQuickField name='couleur' options=couleursOptions}}
               {{> afQuickField name='modeleId' options=modelesOptions}}

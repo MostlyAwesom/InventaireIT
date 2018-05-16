@@ -1,0 +1,11 @@
+<template name="updateFormLieuxTemplate">
+    {{#autoForm collection="Lieux" doc=lieu id="updateLieuxForm" type="update"}}
+        <fieldset>
+          <legend>Modifier un lieu</legend>
+          {{> afQuickField name='nom'}}
+          {{> afQuickField name='rue'}}
+          {{> afQuickField name='villeId' options=villesOptions}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary" id="submitUpdate_btn">Modifier</button>
+    {{/autoForm}}
+</template>
