@@ -23,6 +23,19 @@ Consommables.attachSchema(new SimpleSchema({
           ]}
         }
     },
+    marqueId: {
+        type: String,
+        label: 'Marque',
+        autoform: {
+            type: 'select',
+            firstOption: '',
+            options: function () {
+                return Marque.find().map(function (m) {
+                    return {label: m.nom, value: m._id};
+                });
+            }
+        }
+    },
     modeleId: {
       type: String,
       label: "Modèle",
@@ -30,11 +43,37 @@ Consommables.attachSchema(new SimpleSchema({
         type: 'select',
         firstOption: '',
         options: function () {
-            return Modeles.find().map(function (m) {
+            return Modeles.find({marqueId: AutoForm.getFieldValue('marqueId')}).map(function (m) {
                 return {label: m.nom, value: m._id};
             });
         }
       }
+    },
+    villeId: {
+        type: String,
+        label: 'Ville',
+        autoform: {
+            type: 'select',
+            firstOption: '',
+            options: function () {
+                return Villes.find().map(function (v) {
+                    return {label: v.nom, value: v._id};
+                });
+            }
+        }
+    },
+    lieuId: {
+        type: String,
+        label: 'Lieu',
+        autoform: {
+            type: 'select',
+            firstOption: '',
+            options: function () {
+                return Lieux.find({villeId: AutoForm.getFieldValue('villeId')}).map(function (l) {
+                    return {label: l.nom, value: l._id};
+                });
+            }
+        }
     },
     localId: {
       type: String,

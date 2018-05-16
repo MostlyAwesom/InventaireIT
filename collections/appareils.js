@@ -13,6 +13,19 @@ Appareils.attachSchema(new SimpleSchema({
       type: String,
       label: "Nom"
     },
+    marqueId: {
+        type: String,
+        label: 'Marque',
+        autoform: {
+            type: 'select',
+            firstOption: '',
+            options: function () {
+                return Marque.find().map(function (m) {
+                    return {label: m.nom, value: m._id};
+                });
+            }
+        }
+    },
     modeleId: {
       type: String,
       label: "Modèle",
@@ -20,7 +33,7 @@ Appareils.attachSchema(new SimpleSchema({
         type: 'select',
         firstOption: '',
         options: function () {
-            return Modeles.find().map(function (m) {
+            return Modeles.find({marqueId: AutoForm.getFieldValue('marqueId')}).map(function (m) {
                 return {label: m.nom, value: m._id};
             });
         }
