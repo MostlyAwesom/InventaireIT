@@ -11,6 +11,15 @@ Modeles.attachSchema(new SimpleSchema({
     marqueId: {
         type: String,
         label: "Marque",
+        autoform: {
+            type: 'select',
+            firstOption: '',
+            options: function () {
+                return Marques.find().map(function (m) {
+                    return {label: m.nom, value: m._id};
+                });
+            }
+        }
     }
   }, { tracker: Tracker }));
 
