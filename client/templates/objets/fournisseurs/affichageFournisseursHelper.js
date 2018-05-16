@@ -4,5 +4,8 @@ Template.affichageFournisseursTemplate.events({
 	},
 	'click #update_btn': function() {
 		Router.go('FournisseursUpdate', {_id: this._id});
+	},
+	'click #read_btn': function() {
+		Router.go('FournisseursRead', {_id: this._id});
 	}
 });

@@ -1,6 +1,7 @@
 <template name="readFormConsommablesTemplate">
     {{#autoForm collection="Consommables" doc=consommable id="readConsommablesForm" type="disabled"}}
         <fieldset>
+            <legend>Détails du consommable</legend>
           {{> afQuickField name='numeroSerie'}}
           {{> afQuickField name='couleur' options=couleursOptions}}
           {{> afQuickField name='modeleId' options=modelesOptions}}

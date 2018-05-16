@@ -1,6 +1,7 @@
 <template name="readFormAppareilsTemplate">
     {{#autoForm collection="Appareils" doc=appareil id="readAppareilsForm" type="disabled"}}
         <fieldset>
+            <legend>Détails de l'appareil</legend>
           {{> afQuickField name='numeroSerie'}}
           {{> afQuickField name='nom'}}
           {{> afQuickField name='modeleId' options=modelesOptions}}

@@ -1,0 +1,9 @@
+<template name="readFormFournisseursTemplate">
+    {{#autoForm collection="Fournisseurs" doc=fournisseur id="readFournisseursForm" type="disabled"}}
+    <fieldset>
+        <legend>Détails du fournisseur</legend>
+      {{> afQuickField name='nom'}}
+    </fieldset>
+    <button type="submit" class="btn btn-primary" id="submitRead_btn">Retour</button>
+{{/autoForm}}
+</template>
