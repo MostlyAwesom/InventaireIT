@@ -4,6 +4,9 @@ Template.affichageConsommablesTemplate.events({
 	},
 	'click #update_btn': function() {
 		Router.go('ConsommablesUpdate', {_id: this._id});
+    },
+    'click #read_btn': function() {
+		Router.go('ConsommablesRead', {_id: this._id});
 	}
 });
 

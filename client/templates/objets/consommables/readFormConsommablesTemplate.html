@@ -1,0 +1,13 @@
+<template name="readFormConsommablesTemplate">
+    {{#autoForm collection="Consommables" doc=consommable id="readConsommablesForm" type="disabled"}}
+        <fieldset>
+          {{> afQuickField name='numeroSerie'}}
+          {{> afQuickField name='couleur' options=couleursOptions}}
+          {{> afQuickField name='modeleId' options=modelesOptions}}
+          {{> afQuickField name='localId' options=locauxOptions}}
+          {{> afQuickField name='fournisseurId' options=fournisseursOptions}}
+          {{> afQuickField name='quantite'}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary" id="submitRead_btn">Retour</button>
+    {{/autoForm}}
+</template>
