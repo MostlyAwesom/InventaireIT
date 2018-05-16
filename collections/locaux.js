@@ -32,7 +32,7 @@ Locaux.attachSchema(new SimpleSchema({
             type: 'select',
             firstOption: '',
             options: function () {
-                return Lieux.find({villeId: autoform.getFieldValue('villeId')}).map(function (l) {
+                return Lieux.find({villeId: AutoForm.getFieldValue('villeId')}).map(function (l) {
                     return {label: l.nom, value: l._id};
                 });
             }
