@@ -32,3 +32,6 @@ aldeed:collection2@3.0.0
 msavin:mongol
 session
 aldeed:autoform-bs-datepicker
+
+accounts-password
+accounts-ui
