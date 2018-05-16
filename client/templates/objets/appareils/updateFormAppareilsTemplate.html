@@ -4,15 +4,15 @@
               <legend>Modifier un appareil</legend>
               {{> afQuickField name='numeroSerie'}}
               {{> afQuickField name='nom'}}
-              {{> afQuickField name='modeleId' options=modelesOptions}}
-              {{> afQuickField name='typeMachineId' options=typesMachineOptions}}
-              {{> afQuickField name='localId' options=locauxOptions}}
-              {{> afQuickField name='fournisseurId' options=fournisseursOptions}}
+              {{> afQuickField name='modeleId'}}
+              {{> afQuickField name='typeMachineId'}}
+              {{> afQuickField name='localId'}}
+              {{> afQuickField name='fournisseurId'}}
               {{> afQuickField name='dateMiseEnService'}}
               {{> afQuickField name='dateSortieDeService'}}
               {{> afQuickField name='dateFinDeSupport'}}
               {{> afQuickField name='dureeGarantie'}}
-              {{> afQuickField name='parentId' option=parentsOptions}}
+              {{> afQuickField name='parentId'}}
             </fieldset>
             <button type="submit" class="btn btn-primary" id="submitUpdate_btn">Modifier</button>
         {{/autoForm}}

@@ -15,6 +15,15 @@ Locaux.attachSchema(new SimpleSchema({
     lieuId: {
         type: String,
         label: "Lieu",
+        autoform: {
+            type: 'select',
+            firstOption: '',
+            options: function () {
+                return Lieux.find().map(function (l) {
+                    return {label: l.nom, value: l._id};
+                });
+            }
+        }
     }
   }, { tracker: Tracker }));
 

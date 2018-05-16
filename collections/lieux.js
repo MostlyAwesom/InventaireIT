@@ -14,7 +14,16 @@ Lieux.attachSchema(new SimpleSchema({
     },
     villeId: {
         type: String,
-        label: "Ville"
+        label: "Ville",
+        autoform: {
+            type: 'select',
+            firstOption: '',
+            options: function () {
+                return Villes.find().map(function (v) {
+                    return {label: v.nom, value: v._id};
+                });
+            }
+        }
     }
   }, { tracker: Tracker }));
 

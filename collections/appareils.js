@@ -16,18 +16,54 @@ Appareils.attachSchema(new SimpleSchema({
     modeleId: {
       type: String,
       label: "Modèle",
+      autoform: {
+        type: 'select',
+        firstOption: '',
+        options: function () {
+            return Modeles.find().map(function (m) {
+                return {label: m.nom, value: m._id};
+            });
+        }
+      }
     },
     typeMachineId: {
       type: String,
       label: "Type d'appareil",
+      autoform: {
+        type: 'select',
+        firstOption: '',
+        options: function () {
+            return TypesMachine.find().map(function (t) {
+                return {label: t.libelle, value: t._id};
+            });
+        }
+    }
     },
     localId: {
       type: String,
       label: "Local",
+      autoform: {
+        type: 'select',
+        firstOption: '',
+        options: function () {
+            return Locaux.find().map(function (l) {
+                return {label: l.numero, value: l._id};
+            });
+        }
+      }
     },
     fournisseurId: {
         type: String,
         label: "Fournisseur",
+        autoform: {
+            type: 'select',
+            firstOption: '',
+            options: function () {
+                return Fournisseurs.find().map(function (f) {
+                    return {label: f.nom, value: f._id};
+                });
+            }
+        }
     },
     dateMiseEnService: {
         type: Date,
@@ -51,7 +87,20 @@ Appareils.attachSchema(new SimpleSchema({
     parentId: {
         type: String,
         label: "Lié à",
-        optional: true
+        optional: true,
+        autoform: {
+            type: 'select',
+            firstOption: '',
+            options: function () {
+                var typeOrdinateurFixe = TypesMachine.findOne({libelle: 'Ordinateur fixe'});
+                var typeOrdinateurPortable = TypesMachine.findOne({libelle: 'Ordinateur portable'});
+                var parentsPossibles = Appareils.find({typeMachineId: typeOrdinateurFixe._id, typeMachineId: typeOrdinateurPortable._id});
+                
+                return parentsPossibles.map(function(p){
+                    return {label: p.nom, value: p._id};
+                });
+            }
+        }
     }
   }, { tracker: Tracker }));
 
