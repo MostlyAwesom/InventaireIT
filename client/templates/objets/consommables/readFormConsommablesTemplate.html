@@ -2,12 +2,16 @@
     {{#autoForm collection="Consommables" doc=consommable id="readConsommablesForm" type="disabled"}}
         <fieldset>
             <legend>Détails du consommable</legend>
-          {{> afQuickField name='numeroSerie'}}
-          {{> afQuickField name='couleur'}}
-          {{> afQuickField name='modeleId'}}
-          {{> afQuickField name='localId'}}
-          {{> afQuickField name='fournisseurId'}}
-          {{> afQuickField name='quantite'}}
+            {{> afQuickField name='numeroSerie'}}
+            {{> afQuickField name='couleur'}}
+            {{> afQuickField name='marqueId'}}
+            {{> afQuickField name='modeleId'}}
+            {{> afQuickField name='typeMachineId'}}
+            {{> afQuickField name='villeId'}}
+            {{> afQuickField name='lieuId'}}
+            {{> afQuickField name='localId'}}
+            {{> afQuickField name='fournisseurId'}}
+            {{> afQuickField name='quantite'}}
         </fieldset>
         <button type="submit" class="btn btn-primary" id="submitRead_btn">Retour</button>
     {{/autoForm}}
