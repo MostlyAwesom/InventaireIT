@@ -1,41 +1,41 @@
 Meteor.publish("TousLesObjets", function(){
     return  [
-        Appareils.find(),
-        Consommables.find(),
-        Fournisseurs.find(),
-        Lieux.find(),
-        Locaux.find(),
-        Marques.find(),
-        Modeles.find(),
-        TypesMachine.find(),
-        Villes.find()
+        Appareils.find({}, {sort: {nom: 1}}),
+        Consommables.find({}, {sort: {nom: 1}}),
+        Fournisseurs.find({}, {sort: {nom: 1}}),
+        Lieux.find({}, {sort: {nom: 1}}),
+        Locaux.find({}, {sort: {numero: 1}}),
+        Marques.find({}, {sort: {nom: 1}}),
+        Modeles.find({}, {sort: {nom: 1}}),
+        TypesMachine.find({}, {sort: {libelle: 1}}),
+        Villes.find({}, {sort: {nom: 1}})
     ]  
 });
 
 Meteor.publish("Fournisseurs", function(){
-    return  Fournisseurs.find();
+    return  Fournisseurs.find({}, {sort: {nom: 1}});
 });
 
 Meteor.publish("Lieux", function(){
-    return  Lieux.find();
+    return  Lieux.find({}, {sort: {nom: 1}});
 });
 
 Meteor.publish("Locaux", function(){
-    return  Locaux.find();
+    return  Locaux.find({}, {sort: {numero: 1}});
 });
 
 Meteor.publish("Marques", function(){
-    return  Marques.find();
+    return  Marques.find({}, {sort: {nom: 1}});
 });
 
 Meteor.publish("Modeles", function(){
-    return  Modeles.find();
+    return  Modeles.find({}, {sort: {nom: 1}});
 });
 
 Meteor.publish("TypesMachine", function(){
-    return  TypesMachine.find();
+    return  TypesMachine.find({}, {sort: {libelle: 1}});
 });
 
 Meteor.publish("Villes", function(){
-    return  Villes.find();
+    return  Villes.find({}, {sort: {nom: 1}});
 });
