@@ -6,11 +6,11 @@ Consommables= new Mongo.Collection('consommables');
 Consommables.attachSchema(new SimpleSchema({
     numeroSerie: {
       type: String,
-      label: "Numéro de série",
+      label: 'Numéro de série',
     },
     couleur: {
       type: String,
-      label: "Couleur",
+      label: 'Couleur',
       autoform: {
         type: 'select',
         firstOption: '',
@@ -38,7 +38,7 @@ Consommables.attachSchema(new SimpleSchema({
     },
     modeleId: {
       type: String,
-      label: "Modèle",
+      label: 'Modèle',
       autoform: {
         type: 'select',
         firstOption: '',
@@ -77,7 +77,7 @@ Consommables.attachSchema(new SimpleSchema({
     },
     localId: {
       type: String,
-      label: "Local",
+      label: 'Local',
       autoform: {
         type: 'select',
         firstOption: '',
@@ -90,7 +90,7 @@ Consommables.attachSchema(new SimpleSchema({
     },
     fournisseurId: {
         type: String,
-        label: "Fournisseur",
+        label: 'Fournisseur',
         autoform: {
           type: 'select',
           firstOption: '',
@@ -103,7 +103,7 @@ Consommables.attachSchema(new SimpleSchema({
       },
     quantite: {
         type: Number,
-        label: "Quantité"
+        label: 'Quantité'
     }
   }, { tracker: Tracker }));
 
