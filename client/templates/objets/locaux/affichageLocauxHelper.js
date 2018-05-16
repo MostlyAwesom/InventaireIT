@@ -15,6 +15,7 @@ Template.affichageLocauxTemplate.helpers({
         return Lieux.findOne(this.lieuId);
     },
     ville() {
-        return Villes.findOne(this.lieuId.villeId);
+        var currentLieu = Lieux.findOne(this.lieuId);
+        return Villes.findOne(currentLieu.villeId);
     }
 });
