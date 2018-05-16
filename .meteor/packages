@@ -22,16 +22,12 @@ shell-server@0.3.1            # Server-side component of the `meteor shell` comm
 
 iron:router
 
-#meteortoys:allthings # Incompatible avec collection2@3.0.0
-
 aldeed:autoform@6.3.0
 aldeed:collection2@3.0.0
-#aldeed:simple-schema
-#aldeed:autoform-select2
-#natestrauser:select2
+aldeed:autoform-bs-datepicker
+
 msavin:mongol
 session
-aldeed:autoform-bs-datepicker
 
 accounts-password
 accounts-ui
