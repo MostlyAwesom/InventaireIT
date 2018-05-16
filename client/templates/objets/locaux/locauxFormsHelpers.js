@@ -19,3 +19,17 @@ Template.updateFormLocauxTemplate.helpers({
     });
   }
 });
+
+Template.readFormLocauxTemplate.events({ 
+  'click #submitRead_btn': function() { 
+       Router.go("Locaux");
+  } 
+});
+
+Template.readFormLocauxTemplate.helpers({
+  lieuxOptions: function () {
+    return Lieux.find().map(function (l) {
+      return {label: l.nom, value: l._id};
+    });
+  }
+});

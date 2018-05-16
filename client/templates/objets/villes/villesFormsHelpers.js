@@ -3,3 +3,9 @@ Template.updateFormVillesTemplate.events({
       Router.go('Villes');
     } 
   });
+
+  Template.readFormVillesTemplate.events({ 
+    'click #submitRead_btn': function() { 
+      Router.go('Villes');
+    } 
+  });

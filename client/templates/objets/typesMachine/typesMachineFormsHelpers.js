@@ -3,3 +3,9 @@ Template.updateFormTypesMachineTemplate.events({
       Router.go('TypesMachine');
     } 
   });
+
+  Template.readFormTypesMachineTemplate.events({ 
+    'click #submitRead_btn': function() { 
+      Router.go('TypesMachine');
+    } 
+  });

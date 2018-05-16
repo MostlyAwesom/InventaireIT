@@ -3,3 +3,9 @@ Template.updateFormMarquesTemplate.events({
          Router.go("Marques");
     } 
 }); 
+
+Template.readFormMarquesTemplate.events({ 
+    'click #submitRead_btn': function() { 
+         Router.go("Marques");
+    } 
+}); 
