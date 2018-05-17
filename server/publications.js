@@ -39,3 +39,15 @@ Meteor.publish("TypesMachine", function(){
 Meteor.publish("Villes", function(){
     return  Villes.find({}, {sort: {nom: 1}});
 });
+
+Meteor.publish( 'Utilisateurs', function() {
+    let isAdmin = Roles.userIsInRole( this.userId, 'administrator' );
+  
+    if ( isAdmin ) {
+      return [
+        Meteor.users.find( {}, {sort: {username: 1}})
+      ];
+    } else {
+      return null;
+    }
+  });
