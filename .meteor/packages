@@ -31,3 +31,7 @@ session
 
 accounts-password
 accounts-ui
+alanning:roles
+accounts-base
+useraccounts:unstyled
+raix:handlebar-helpers
