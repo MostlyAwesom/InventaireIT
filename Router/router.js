@@ -422,13 +422,10 @@ Router.map(function() {
         path: '/proprietes/modeles',
         template: 'modelesTemplate',
 
-        data: function(){
-            var marques = Marques.find();
-            var modeles = Modeles.find();
-            
+        data: function(){       
             return {
-                marques: marques,
-                modeles: modeles
+                marques: Marques.find(),
+                modeles: Modeles.find()
             };
         },
         waitOn: function(){
@@ -440,12 +437,9 @@ Router.map(function() {
         template: 'updateFormModelesTemplate',
 
         data: function(){
-            var modele = Modeles.findOne({_id: Router.current().params._id});
-            var marques = Marques.find();
-
             return {
-                modele: modele,
-                marques: marques
+                modele: Modeles.findOne({_id: Router.current().params._id}),
+                marques: Marques.find()
             };
         },
         waitOn: function(){
