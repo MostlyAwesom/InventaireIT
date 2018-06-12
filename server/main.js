@@ -8,5 +8,5 @@ Meteor.startup(() => {
 //			cert: Assets.getText("server.crt")
 //		}
 //	});
-	SSL('/home/egremyb/Dropbox/InventaireIT/private/server.key', '/home/egremyb/Dropbox/InventaireIT/private/server.crt');
+//	SSL('/home/egremyb/Dropbox/InventaireIT/private/server.key', '/home/egremyb/Dropbox/InventaireIT/private/server.crt');
 });
