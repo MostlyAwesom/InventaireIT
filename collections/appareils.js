@@ -106,6 +106,7 @@ Appareils.attachSchema(new SimpleSchema({
     dateMiseEnService: {
         type: Date,
         label: "Date de mise en service",
+	optional: true
     },
     dateSortieDeService: {
         type: Date,
@@ -148,6 +149,8 @@ Appareils.allow({
             return false;
         } else if (Roles.userIsInRole(Meteor.user(), ['basic'])){
             return true; 
+        } else if (Roles.userIsInRole(Meteor.user(), ['administrator'])){
+            return true; 
         } 
     }, 
     update: function() { 
@@ -155,12 +158,16 @@ Appareils.allow({
             return false;
         } else if (Roles.userIsInRole(Meteor.user(), ['basic'])){
             return true; 
+        } else if (Roles.userIsInRole(Meteor.user(), ['administrator'])){
+            return true; 
         } 
     }, 
     remove: function() { 
         if(Roles.userIsInRole(Meteor.user(), ['unauthorized'])){
             return false;
         } else if (Roles.userIsInRole(Meteor.user(), ['basic'])){
+            return true; 
+        } else if (Roles.userIsInRole(Meteor.user(), ['administrator'])){
             return true; 
         } 
     } 
