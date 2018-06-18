@@ -30,7 +30,8 @@ msavin:mongol
 session@1.1.7
 
 accounts-password@1.5.1
-accounts-ui@1.3.0
+//accounts-ui@1.3.0
+ian:accounts-ui-bootstrap-3
 alanning:roles
 underscore
 tarang:ssl
