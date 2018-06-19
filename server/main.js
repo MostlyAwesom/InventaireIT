@@ -8,5 +8,5 @@ Meteor.startup(() => {
 			cert: Assets.getText("server.crt")
 		}
 	});
-	SSL('~/git/InventaireIT/private/server.key', '~/git/InventaireIT/private/server.crt');
+	SSL('/git/InventaireIT/private/server.key', '/git/InventaireIT/private/server.crt');
 });
